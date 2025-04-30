@@ -3,10 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enhanced Landing Page</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wyvern Wands - Handmade Wooden Wands</title>
     <meta name="description" content="Discover our collection of handmade wooden wands, crafted with real wood and unique designs.">
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        .hover-scale {
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+        .hover-scale:hover {
+            transform: scale(1.03);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        .smooth-transition {
+            transition: all 0.3s ease-in-out;
+        }
+    </style>
 </head>
 <body class="font-['Inter'] antialiased">
     <!-- Announcement Bar -->
@@ -18,19 +43,28 @@
     <header class="sticky top-0 z-50 bg-white shadow-md">
         <nav class="container mx-auto px-4 py-4 flex items-center justify-between">
             <div class="flex items-center">
-                <a href="/" class="text-2xl font-bold text-gray-900">Wyvern Wands</a>
+                <a href="https://awstrikerOz.github.io/wyvern-wands-2025-04-30-zayy3" class="text-2xl font-bold text-gray-900 hover:text-gray-700 transition-colors">Wyvern Wands</a>
             </div>
             <div class="hidden md:flex space-x-8">
-                <a href="#" class="text-gray-600 hover:text-gray-900 transition-colors">Shop</a>
-                <a href="#" class="text-gray-600 hover:text-gray-900 transition-colors">About</a>
-                <a href="#" class="text-gray-600 hover:text-gray-900 transition-colors">Contact</a>
+                <a href="#shop" class="text-gray-600 hover:text-gray-900 transition-colors">Shop</a>
+                <a href="#about" class="text-gray-600 hover:text-gray-900 transition-colors">About</a>
+                <a href="#features" class="text-gray-600 hover:text-gray-900 transition-colors">Features</a>
+                <a href="#benefits" class="text-gray-600 hover:text-gray-900 transition-colors">Benefits</a>
+                <a href="#testimonials" class="text-gray-600 hover:text-gray-900 transition-colors">Testimonials</a>
+                <a href="#contact" class="text-gray-600 hover:text-gray-900 transition-colors">Contact</a>
             </div>
-            <button class="md:hidden">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16"/>
-                </svg>
+            <button class="mobile-menu-button md:hidden" aria-label="Toggle menu">
+                <i class="fas fa-bars text-2xl"></i>
             </button>
         </nav>
+        <div class="mobile-menu hidden md:hidden">
+            <a href="#shop" class="block px-4 py-2 text-gray-600 hover:bg-gray-100">Shop</a>
+            <a href="#about" class="block px-4 py-2 text-gray-600 hover:bg-gray-100">About</a>
+            <a href="#features" class="block px-4 py-2 text-gray-600 hover:bg-gray-100">Features</a>
+            <a href="#benefits" class="block px-4 py-2 text-gray-600 hover:bg-gray-100">Benefits</a>
+            <a href="#testimonials" class="block px-4 py-2 text-gray-600 hover:bg-gray-100">Testimonials</a>
+            <a href="#contact" class="block px-4 py-2 text-gray-600 hover:bg-gray-100">Contact</a>
+        </div>
     </header>
 
     <!-- Hero Section -->
@@ -43,51 +77,60 @@
         </div>
         <div class="relative container mx-auto px-4 h-full flex items-center justify-center">
             <div class="text-center text-white max-w-4xl">
-                <h1 class="text-4xl md:text-6xl font-bold mb-6">Wyvern Wands</h1>
-                <p class="text-xl md:text-2xl mb-8">Handmade Wooden Wands</p>
-                <a href="#shop" class="inline-block bg-white text-gray-900 px-8 py-4 rounded-full text-lg font-semibold hover:scale-105 transition-transform duration-300">
-                    Shop Now
+                <h1 class="text-4xl md:text-6xl font-bold mb-6 animate-[fadeIn_1s_ease-in]">Wyvern Wands</h1>
+                <p class="text-xl md:text-2xl mb-8 animate-[fadeIn_1s_ease-in_0.5s]">Handcrafted Magical Implements for the Modern Practitioner</p>
+                <a href="#shop" class="inline-block bg-white text-gray-900 px-8 py-4 rounded-full text-lg font-semibold hover:scale-105 hover:shadow-lg transition-all duration-300 animate-[fadeIn_1s_ease-in_1s]">
+                    Explore Our Collection
                 </a>
             </div>
         </div>
     </section>
 
+    <!-- About Us Section -->
+    <section id="about" class="py-24 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-16">About Wyvern Wands</h2>
+            <div class="max-w-4xl mx-auto text-gray-600 space-y-8">
+                <p class="leading-relaxed">
+                    Founded in 2023 by master craftsman Marcus Blackwood, Wyvern Wands began as a small workshop dedicated to preserving the ancient art of wandcraft. What started as a passion project in a humble garage has grown into a renowned studio, combining traditional woodworking techniques with innovative design approaches.
+                </p>
+                <p class="leading-relaxed">
+                    Our mission is to create extraordinary magical implements that serve as both functional tools and works of art. We believe in sustainable practices, ethical sourcing, and the power of handcrafted quality. Every wand that leaves our workshop carries with it our core values of excellence, integrity, and respect for the magical arts.
+                </p>
+            </div>
+        </div>
+    </section>
+
     <!-- Features -->
-    <section class="py-24 bg-white">
+    <section id="features" class="py-24 bg-gray-50">
         <div class="container mx-auto px-4">
             <h2 class="text-3xl md:text-4xl font-bold text-center mb-16">Crafted with Excellence</h2>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
-                <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
+                <div class="bg-white p-8 rounded-xl shadow-lg hover-scale">
                     <div class="text-center">
                         <div class="w-16 h-16 mx-auto mb-6 bg-gray-100 rounded-full flex items-center justify-center">
-                            <svg class="w-8 h-8 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"/>
-                            </svg>
+                            <i class="fas fa-tree text-2xl text-gray-600"></i>
                         </div>
-                        <h3 class="text-xl font-semibold mb-4">Real Wood</h3>
-                        <p class="text-gray-600">Crafted from premium, sustainably sourced wood varieties</p>
+                        <h3 class="text-xl font-semibold mb-4">Premium Materials</h3>
+                        <p class="text-gray-600">Each wand is crafted from carefully selected, sustainably sourced exotic and local hardwoods, ensuring both beauty and durability.</p>
                     </div>
                 </div>
-                <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
+                <div class="bg-white p-8 rounded-xl shadow-lg hover-scale">
                     <div class="text-center">
                         <div class="w-16 h-16 mx-auto mb-6 bg-gray-100 rounded-full flex items-center justify-center">
-                            <svg class="w-8 h-8 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"/>
-                            </svg>
+                            <i class="fas fa-fingerprint text-2xl text-gray-600"></i>
                         </div>
-                        <h3 class="text-xl font-semibold mb-4">Unique</h3>
-                        <p class="text-gray-600">Each wand is one-of-a-kind with its own character</p>
+                        <h3 class="text-xl font-semibold mb-4">Unique Design</h3>
+                        <p class="text-gray-600">No two wands are alike - each piece features distinctive grain patterns, natural variations, and custom inlays that make it truly one-of-a-kind.</p>
                     </div>
                 </div>
-                <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
+                <div class="bg-white p-8 rounded-xl shadow-lg hover-scale">
                     <div class="text-center">
                         <div class="w-16 h-16 mx-auto mb-6 bg-gray-100 rounded-full flex items-center justify-center">
-                            <svg class="w-8 h-8 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"/>
-                            </svg>
+                            <i class="fas fa-hand-holding text-2xl text-gray-600"></i>
                         </div>
-                        <h3 class="text-xl font-semibold mb-4">Hand Crafted</h3>
-                        <p class="text-gray-600">Meticulously crafted by skilled artisans</p>
+                        <h3 class="text-xl font-semibold mb-4">Artisan Crafted</h3>
+                        <p class="text-gray-600">Our master wandmakers spend up to 20 hours on each wand, ensuring perfect balance, finish, and magical resonance.</p>
                     </div>
                 </div>
             </div>
@@ -95,20 +138,20 @@
     </section>
 
     <!-- Benefits -->
-    <section class="py-16">
+    <section id="benefits" class="py-16">
         <div class="flex flex-col">
             <!-- Benefit 1 -->
             <div class="grid grid-cols-1 md:grid-cols-2">
                 <div class="flex items-center justify-center p-12 md:p-24">
                     <div class="max-w-lg">
-                        <h2 class="text-3xl font-bold mb-6">Beautifully Made</h2>
-                        <p class="text-gray-600 mb-8">Each wand is carefully crafted to perfection, ensuring the highest quality and aesthetic appeal.</p>
-                        <a href="#" class="inline-block bg-gray-900 text-white px-8 py-4 rounded-full hover:bg-gray-800 transition-colors">Learn More</a>
+                        <h2 class="text-3xl font-bold mb-6">Master Craftsmanship</h2>
+                        <p class="text-gray-600 mb-8">Our wands represent the pinnacle of magical craftsmanship. Each piece is meticulously shaped, balanced, and finished by hand using techniques passed down through generations. We combine traditional methods with modern precision tools to create implements that are both beautiful and powerful. Every wand undergoes rigorous quality testing to ensure it meets our exacting standards.</p>
+                        <a href="#shop" class="inline-block bg-gray-900 text-white px-8 py-4 rounded-full hover:bg-gray-800 hover:scale-105 transition-all duration-300">Explore Our Process</a>
                     </div>
                 </div>
                 <div class="h-96 md:h-auto">
                     <img src="https://images.unsplash.com/photo-1556740714-a8395b3bf30f?w=800&h=600&fit=crop&q=80" 
-                         alt="Beautifully crafted wand" 
+                         alt="Master craftsman at work" 
                          class="w-full h-full object-cover">
                 </div>
             </div>
@@ -117,14 +160,14 @@
             <div class="grid grid-cols-1 md:grid-cols-2 bg-gray-50">
                 <div class="h-96 md:h-auto order-2 md:order-1">
                     <img src="https://images.unsplash.com/photo-1502982720700-bfff97f2ecac?w=800&h=600&fit=crop&q=80" 
-                         alt="Focus and precision" 
+                         alt="Magical focus and energy" 
                          class="w-full h-full object-cover">
                 </div>
                 <div class="flex items-center justify-center p-12 md:p-24 order-1 md:order-2">
                     <div class="max-w-lg">
-                        <h2 class="text-3xl font-bold mb-6">Focus</h2>
-                        <p class="text-gray-600 mb-8">Designed to enhance concentration and channel your inner power.</p>
-                        <a href="#" class="inline-block bg-gray-900 text-white px-8 py-4 rounded-full hover:bg-gray-800 transition-colors">Discover More</a>
+                        <h2 class="text-3xl font-bold mb-6">Enhanced Magical Focus</h2>
+                        <p class="text-gray-600 mb-8">Our wands are specifically designed to amplify your natural magical abilities. The carefully selected woods and precise crafting techniques create perfect channels for magical energy, allowing for enhanced focus and more powerful spellcasting. Each wand resonates with its user's unique magical signature, creating a deep and lasting bond.</p>
+                        <a href="#shop" class="inline-block bg-gray-900 text-white px-8 py-4 rounded-full hover:bg-gray-800 hover:scale-105 transition-all duration-300">Experience the Power</a>
                     </div>
                 </div>
             </div>
@@ -133,39 +176,146 @@
             <div class="grid grid-cols-1 md:grid-cols-2">
                 <div class="flex items-center justify-center p-12 md:p-24">
                     <div class="max-w-lg">
-                        <h2 class="text-3xl font-bold mb-6">Boxed</h2>
-                        <p class="text-gray-600 mb-8">Each wand comes in a premium presentation box, perfect for gifting or display.</p>
-                        <a href="#" class="inline-block bg-gray-900 text-white px-8 py-4 rounded-full hover:bg-gray-800 transition-colors">View Details</a>
+                        <h2 class="text-3xl font-bold mb-6">Luxury Presentation</h2>
+                        <p class="text-gray-600 mb-8">Every Wyvern Wand comes housed in a handcrafted presentation box lined with premium silk. The box features protective enchantments to keep your wand safe and includes a certificate of authenticity detailing the wood type, core materials, and unique magical properties. Perfect for gifting or displaying your magical implement with pride.</p>
+                        <a href="#shop" class="inline-block bg-gray-900 text-white px-8 py-4 rounded-full hover:bg-gray-800 hover:scale-105 transition-all duration-300">View Collections</a>
                     </div>
                 </div>
                 <div class="h-96 md:h-auto">
                     <img src="https://images.unsplash.com/photo-1471341971476-ae15ff5dd4ea?w=800&h=600&fit=crop&q=80" 
-                         alt="Premium packaging" 
+                         alt="Luxury wand presentation box" 
                          class="w-full h-full object-cover">
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- Testimonials -->
+    <section id="testimonials" class="py-24 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-16">What Our Customers Say</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-lg hover-scale">
+                    <div class="flex text-yellow-400 mb-4">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-gray-600 mb-4">"The craftsmanship is exceptional. My elm wand feels like it was made specifically for me. The balance and energy flow are perfect."</p>
+                    <div class="text-sm">
+                        <p class="font-semibold">Sarah Mitchell</p>
+                        <p class="text-gray-500">Professional Spellcaster</p>
+                    </div>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg hover-scale">
+                    <div class="flex text-yellow-400 mb-4">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-gray-600 mb-4">"I've been using magical implements for 20 years, and Wyvern Wands are simply the best. The attention to detail and magical resonance are unmatched. Worth every penny!"</p>
+                    <div class="text-sm">
+                        <p class="font-semibold">James Anderson</p>
+                        <p class="text-gray-500">Magical Arts Instructor</p>
+                    </div>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg hover-scale">
+                    <div class="flex text-yellow-400 mb-4">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <p class="text-gray-600 mb-4">"The packaging alone shows their commitment to excellence. My rose quartz-inlaid maple wand arrived in perfect condition and looks stunning on display."</p>
+                    <div class="text-sm">
+                        <p class="font-semibold">Emily Wong</p>
+                        <p class="text-gray-500">Collector</p>
+                    </div>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg hover-scale">
+                    <div class="flex text-yellow-400 mb-4">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-gray-600 mb-4">"Customer service was exceptional. They helped me select the perfect wand for my practice, and the results have been transformative."</p>
+                    <div class="text-sm">
+                        <p class="font-semibold">Michael Roberts</p>
+                        <p class="text-gray-500">Energy Healer</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="relative py-24 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1518531933037-91b2f5f229cc?w=1600&auto=format&fit=crop&q=80')">
+        <div class="absolute inset-0 bg-black/60"></div>
+        <div class="relative container mx-auto px-4 text-center text-white">
+            <h2 class="text-4xl md:text-5xl font-bold mb-8">Ready to Begin Your Magical Journey?</h2>
+            <p class="text-xl mb-12 max-w-2xl mx-auto">Join thousands of satisfied practitioners who have discovered the power of Wyvern Wands. Order yours today and experience the difference that true craftsmanship makes.</p>
+            <a href="#shop" class="inline-block bg-white text-gray-900 px-8 py-4 rounded-full text-lg font-semibold hover:scale-105 hover:shadow-lg transition-all duration-300">
+                Shop Our Collection
+            </a>
+        </div>
+    </section>
+
     <!-- FAQ Section -->
-    <section class="py-24 bg-gray-50">
+    <section id="faq" class="py-24 bg-gray-50">
         <div class="container mx-auto px-4">
             <h2 class="text-3xl md:text-4xl font-bold text-center mb-16">Frequently Asked Questions</h2>
             <div class="max-w-3xl mx-auto space-y-6">
-                <div class="bg-white rounded-lg shadow-md">
+                <div class="bg-white rounded-lg shadow-md hover-scale">
                     <button class="w-full text-left px-6 py-4 focus:outline-none">
                         <div class="flex justify-between items-center">
                             <h3 class="text-lg font-semibold">How are the wands made?</h3>
-                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"/>
-                            </svg>
+                            <i class="fas fa-chevron-down"></i>
                         </div>
                     </button>
                     <div class="px-6 pb-4">
-                        <p class="text-gray-600">Each wand is handcrafted from carefully selected wood using traditional techniques combined with modern precision tools.</p>
+                        <p class="text-gray-600">Each wand is handcrafted from carefully selected wood using traditional techniques combined with modern precision tools. Our process involves multiple stages of shaping, carving, and finishing, taking anywhere from 15-20 hours per wand.</p>
                     </div>
                 </div>
-                <!-- Additional FAQ items would go here -->
+                <div class="bg-white rounded-lg shadow-md hover-scale">
+                    <button class="w-full text-left px-6 py-4 focus:outline-none">
+                        <div class="flex justify-between items-center">
+                            <h3 class="text-lg font-semibold">What woods do you use?</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                    </button>
+                    <div class="px-6 pb-4">
+                        <p class="text-gray-600">We work with a variety of sustainably sourced hardwoods including oak, maple, ebony, and rosewood. Each wood type is chosen for its specific magical properties and natural beauty.</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-md hover-scale">
+                    <button class="w-full text-left px-6 py-4 focus:outline-none">
+                        <div class="flex justify-between items-center">
+                            <h3 class="text-lg font-semibold">How long is shipping?</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                    </button>
+                    <div class="px-6 pb-4">
+                        <p class="text-gray-600">We offer worldwide shipping with delivery times averaging 5-7 business days. Each wand is carefully packaged in our protective boxes to ensure safe arrival.</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-md hover-scale">
+                    <button class="w-full text-left px-6 py-4 focus:outline-none">
+                        <div class="flex justify-between items-center">
+                            <h3 class="text-lg font-semibold">Do you offer custom wands?</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                    </button>
+                    <div class="px-6 pb-4">
+                        <p class="text-gray-600">Yes, we offer custom wand creation services. Contact us to discuss your specific requirements and we'll work with you to create your perfect magical implement.</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -177,25 +327,45 @@
                 <div>
                     <h3 class="text-xl font-bold mb-4">Wyvern Wands</h3>
                     <p class="text-gray-400">Crafting magical moments since 2023</p>
+                    <div class="mt-4 flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
                 </div>
                 <div>
                     <h4 class="font-semibold mb-4">Quick Links</h4>
                     <ul class="space-y-2">
-                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Shop</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">About</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Contact</a></li>
+                        <li><a href="#shop" class="text-gray-400 hover:text-white transition-colors">Shop</a></li>
+                        <li><a href="#about" class="text-gray-400 hover:text-white transition-colors">About</a></li>
+                        <li><a href="#features" class="text-gray-400 hover:text-white transition-colors">Features</a></li>
+                        <li><a href="#testimonials" class="text-gray-400 hover:text-white transition-colors">Testimonials</a></li>
+                        <li><a href="#faq" class="text-gray-400 hover:text-white transition-colors">FAQ</a></li>
                     </ul>
                 </div>
                 <div>
                     <h4 class="font-semibold mb-4">Contact</h4>
-                    <p class="text-gray-400">Email: 1@1.com</p>
+                    <ul class="space-y-2">
+                        <li class="text-gray-400">Email: contact@wyvernwands.com</li>
+                        <li class="text-gray-400">Phone: (555) 123-4567</li>
+                        <li class="text-gray-400">Address: 123 Magical Lane</li>
+                        <li class="text-gray-400">Mystical City, MC 12345</li>
+                    </ul>
                 </div>
                 <div>
-                    <h4 class="font-semibold mb-4">Policies</h4>
+                    <h4 class="font-semibold mb-4">Legal</h4>
                     <ul class="space-y-2">
-                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Privacy Policy</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Terms of Service</a></li>
+                        <li><a href="https://awstrikerOz.github.io/wyvern-wands-2025-04-30-zayy3/privacy.html" class="text-gray-400 hover:text-white transition-colors">Privacy Policy</a></li>
+                        <li><a href="https://awstrikerOz.github.io/wyvern-wands-2025-04-30-zayy3/terms.html" class="text-gray-400 hover:text-white transition-colors">Terms of Service</a></li>
+                        <li><a href="https://awstrikerOz.github.io/wyvern-wands-2025-04-30-zayy3/blog.html" class="text-gray-400 hover:text-white transition-colors">Blog</a></li>
                         <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Shipping Policy</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Returns</a></li>
                     </ul>
                 </div>
             </div>
@@ -204,5 +374,36 @@
             </div>
         </div>
     </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuButton = document.querySelector('header nav .mobile-menu-button');
+            const mobileMenu = document.querySelector('header nav .mobile-menu');
+            
+            if (mobileMenuButton && mobileMenu) {
+                mobileMenuButton.addEventListener('click', () => {
+                    mobileMenu.classList.toggle('hidden');
+                    const icon = mobileMenuButton.querySelector('i');
+                    if (icon) {
+                        icon.classList.toggle('fa-bars');
+                        icon.classList.toggle('fa-times');
+                    }
+                });
+
+                const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+                mobileMenuLinks.forEach(link => {
+                    link.addEventListener('click', () => {
+                        mobileMenu.classList.add('hidden');
+                        const icon = mobileMenuButton.querySelector('i');
+                        if (icon) {
+                            icon.classList.remove('fa-times');
+                            icon.classList.add('fa-bars');
+                        }
+                    });
+                });
+            }
+        });
+    </script>
+</body>
 </body>
 </html>
